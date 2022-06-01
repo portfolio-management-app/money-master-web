@@ -15,7 +15,6 @@ const CDCryptoDetail = lazy(
 );
 
 const AssetVolatilityDetailPage = () => {
-  const theme = useTheme();
   const router = useRouter();
   const { locale } = router;
   const detail = locale === 'vi' ? content['vi'] : content['en'];

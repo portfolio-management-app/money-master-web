@@ -1,6 +1,10 @@
 import { observer } from "mobx-react-lite";
 
-const CSDMoveToFundForm = observer(() => {
+interface IProps {
+    handleFormSubmit: Function;
+}
+
+const CSDMoveToFundForm = observer(({ handleFormSubmit }: IProps) => {
     return <></>;
 });
 

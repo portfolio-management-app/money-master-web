@@ -1,6 +1,10 @@
 import { observer } from "mobx-react-lite";
 
-const CSDSellForm = observer(() => {
+interface IProps {
+    handleFormSubmit: Function
+}
+
+const CSDSellForm = observer(({ handleFormSubmit }: IProps) => {
     return <></>;
 });
 

@@ -7,9 +7,9 @@ import { ITransactionRequest, TransferToInvestFundType } from 'shared/types';
 import CDMoveToFundForm from './cd-move-to-fund-form';
 import { cryptoDetailStore } from 'shared/store';
 
-interface IProps {}
+interface IProps { }
 
-export const CDCryptoForm = observer(({}: IProps) => {
+export const CDCryptoForm = observer(({ }: IProps) => {
   const theme = useTheme();
   const [focusedButtonKey, setFocusedButtonKey] = useState(0);
   const [selectedForm, setSelectedForm] = useState<any>(null);
@@ -17,7 +17,7 @@ export const CDCryptoForm = observer(({}: IProps) => {
   const [errorMessage, setErrorMessage] = useState<string>('');
 
   useEffect(() => {
-    const fetchAssetPrice = async () => {};
+    const fetchAssetPrice = async () => { };
     fetchAssetPrice();
     setSelectedForm(
       <CDBuyCryptoForm
@@ -46,7 +46,6 @@ export const CDCryptoForm = observer(({}: IProps) => {
       cryptoDetailStore.setUpdateOverviewData(true);
       handleClose();
     }
-    console.log(payload);
   };
 
   const moveToFund = async (payload: TransferToInvestFundType) => {
@@ -57,14 +56,13 @@ export const CDCryptoForm = observer(({}: IProps) => {
       cryptoDetailStore.setUpdateOverviewData(true);
       handleClose();
     }
-    console.log(payload);
   };
 
   const sellCrypto = async (payload: ITransactionRequest) => {
     if (
       cryptoDetailStore.cryptoDetail &&
       payload.amountInDestinationAssetUnit >
-        cryptoDetailStore.cryptoDetail?.currentAmountHolding
+      cryptoDetailStore.cryptoDetail?.currentAmountHolding
     ) {
       setErrorMessage('Amount is greater than your own shares');
       return;
@@ -76,7 +74,6 @@ export const CDCryptoForm = observer(({}: IProps) => {
       cryptoDetailStore.setUpdateOverviewData(true);
       handleClose();
     }
-    console.log(payload);
   };
 
   const formArray = [
