@@ -93,15 +93,8 @@ export const CashInvestments = observer(({
   };
 
   const renderDescription = (description: any) => {
-<<<<<<< HEAD
     if (description) return description.toString().slice(0, 25) + '...';
     else return "";
-=======
-    if(!description){
-      return '';
-    }
-    return description.toString().slice(0, 25) + '...';
->>>>>>> f473a5d305557867c6df78631ce939bb2dc0d63f
   };
 
   return cashDetail?.length ? (
